@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<div class="top">Invites</div>
+	<div class='panel'>
+		<a href="/">Home</a>
+		<a href="/accepted">Accepted Events</a>
+		<a href="/myevents">My Events</a>
+		<a href="/create">Create Invitation</a>
+		<form action="/logout" method="POST">
+  			<button type="submit">Log Out</button>
+		</form>
+	</div>
+	<div class="invitation">
+		<% invitations.forEach(function(invitation){ %>
+		<div>
+			<a href="/read/<%=invitation.id%>" class="read">
+				<h2><%= invitation.header %></h4>
+				<h4>Event Date: <%= invitation.date %></h4>
+				<h4>Event Location: <%= invitation.location %></h4>
+				<h4>Accepted by <%=invitation.accepted.length%></h4>	
+			</a>
+		</div>
+	    <% }) %>
+	</div>
+</body>
+</html>

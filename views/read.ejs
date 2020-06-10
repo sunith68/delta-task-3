@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="/style1.css">
+</head>
+<body>
+	<div class="top">Invites</div>
+	<div class='panel'>
+		<a href="/">Home</a>
+		<a href="/accepted">Accepted Events</a>
+		<a href="/myevents">My Events</a>
+		<a href="/create">Create Invitation</a>
+		<form action="/logout" method="POST">
+  			<button type="submit">Log Out</button>
+		</form>
+	</div>
+	<div class ='read'>
+		<button onclick="goBack()">Back</button>
+		<%if(messages.user=='user'){%>
+		<div><%=invitation.accepted.length%> users have accepted your invitation</div>
+		<div>Accepted by
+			<%invitation.accepted.forEach((acc)=>{%>
+			 <%=acc%> , <%})%>
+		</div>
+		<%}%>
+		<div class='invcontents'>		
+			<div><%=invitation.header%></div>
+			<div><%=invitation.body%></div>
+			<div><%=invitation.footer%></div>
+		</div>
+		<%if(messages.user!='user'&&messages.user!='accept'){%>
+		<form action="/accept/<%=invitation.id%>" method="POST">
+  			<button type="submit">Accept</button>
+		</form>
+		<form action="/reject/<%=invitation.id%>" method="POST">
+  			<button type="submit">Reject</button>
+		</form>
+		<%}%>
+	</div>
+
+	<script>
+		function goBack() {
+		  window.history.back();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: black;
+}
+
+body{
+ background: #e6ffff;
+}
+a{
+	text-decoration: none;	
+}
+button{
+	padding: 4px;
+	background:  #4d94ff;
+	border: none;
+	border-radius: 5px;
+}
+button:hover{
+	cursor: pointer;
+}
+.top{
+	padding: 15px 0px;
+	font-size: 38px;
+	background:  #5900b3;
+	color: white;
+	text-align: center;
+}
+.panel{
+	font-size: 27px;
+	padding: 10px 10px;
+	background: #6600cc;
+	color: green;
+}
+.panel form{
+	float: right;
+	display: inline-block;
+}
+.panel a{
+	color: white;
+	padding: 0 8px;
+}
+.panel button{
+	font-size: 23px;
+	background: #6600cc;
+	color: white;
+}
+.sign{
+	margin:auto;
+	width:10vw;
+	padding: 15px 20px;
+	font-size: 20px;
+	text-align: center;
+	border:3px solid #1ac6ff;
+	border-radius:10px; 
+	margin-top: 20px;
+}
+.sign legend{
+	font-size: 30px;
+}
+
+.read{
+	margin: auto;
+
+}
+.read form{
+	display: inline;
+}
+.invitation{
+	margin:auto;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 16px;
+}
+.invitation div{
+	margin-bottom:15px; 
+}
+.invitation h2{
+	font-size: 27px;
+}
+.read{
+
+	width: 80vw;
+	margin-top: 19px;
+}
+.invcontents div:nth-child(1){
+	margin-top: 5px;
+	text-align: center;
+	font-size: 23px;
+	font-weight: bold;
+}
+.invcontents div:nth-child(2){
+	text-align: center;
+	font-size: 20px;
+}
+.invcontents div:nth-child(3){
+	text-align: center;
+	font-size: 21px;
+}
+.read div{
+	padding: 5px;
+}
+.changes{
+	width: 75vw;
+	margin:auto;
+	margin-top: 20px;
+}
+.create label{
+	display: block;
+	margin-top:2px;
+}
+.create input,textarea{
+	display: block;
+	padding: 3px 0;
+	margin-bottom: 4px;
+}
+.create input:nth-child(2){
+	width: 60vw;
+}
+.create textarea{
+	width: 75vw;
+}
+.create a,button{
+	margin-left: 2px; 
+}
